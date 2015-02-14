@@ -7,4 +7,9 @@ class Product < ActiveRecord::Base
                 message: 'URL should point on image of GIF, JPG or PNG format.'
                       }
   validates :title, length: {minimum: 10}
+
+  def self.latest
+    Product.order(:updated_at).last
+  end
+
 end
