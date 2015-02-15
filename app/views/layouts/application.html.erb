@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= favicon_link_tag "favicon.png" %>
   <title>Susanoo</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -8,7 +9,7 @@
 </head>
 <body class="<%= controller.controller_name %>">
     <div id="banner">
-      <%= image_tag("logo.png") %>
+      <%= image_tag("bookshelf.png", size: "73x45") %>
       <%= @page_title || "Susanoo" %>
     </div>
     <div id="columns">
