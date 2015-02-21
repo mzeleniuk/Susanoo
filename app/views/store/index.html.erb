@@ -2,6 +2,10 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
+<% if !session[:user_id] %>
+    <%= button_to 'Login', login_url, method: :get, style: "float: right" %>
+<% end %>
+
 <h1>Susanoo Catalog</h1>
 <% cache ['store', Product.latest] do %>
 <% @products.each do |product| %>
