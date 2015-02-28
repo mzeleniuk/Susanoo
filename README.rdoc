@@ -1,7 +1,0 @@
-== Susanoo
-
-Susanoo - Internet Bookshop.
-
-Seller is able to place new products, add description, picture and price.
-
-Visitor sees catalog. To buy a product, he adds it to the shopping cart and draws a purchase.

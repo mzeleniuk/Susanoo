@@ -7,7 +7,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body class="<%= controller.controller_name %>">
+<div class="page-wrap">
+
     <div id="banner">
       <%= form_tag store_path, class: 'locale' do %>
           <%= select_tag 'set_locale',
@@ -16,9 +19,10 @@
           <%= submit_tag 'submit' %>
           <%= javascript_tag "$('.locale input').hide()" %>
           <% end %>
-      <%= image_tag("bookshelf.png", size: "73x45") %>
+      <%= image_tag("bookshelf.png", size: "45x45") %>
       <%= @page_title || t('.title') %>
     </div>
+
     <div id="columns">
       <div id="side">
         <div id="cart">
@@ -47,5 +51,18 @@
         <%= yield %>
       </div>
     </div>
+</div>
+
+    <div class="footer">
+      <div class="links">
+        <a href="#">About</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+      <div class="copyright">Michael Zelenyuk, 2015</div>
+      <div class="image">
+      <%= image_tag("footer_logo.jpg") %></div>
+    </div>
+
 </body>
 </html>

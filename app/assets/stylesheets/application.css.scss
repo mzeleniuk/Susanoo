@@ -14,6 +14,12 @@
 *= require_self
 */
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 #banner {
   background: #9c9;
   padding: 10px;
@@ -109,4 +115,46 @@
 .locale {
   float: right;
   margin: -0.25em 0.1em;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -300px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.footer, .page-wrap:after {
+  height: 300px;
+}
+
+.footer {
+  background: #767679;
+  .links {
+    display: inline-block;
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    a {
+      text-decoration: none;
+      color: #eaeaea;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  .copyright {
+    padding-top: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #eaeaea;
+  }
+  .image {
+    padding-top: 20px;
+    margin-left: 42%;
+  }
 }
