@@ -2,7 +2,7 @@
 <html>
 <head>
   <%= favicon_link_tag "favicon.png" %>
-  <title>Susanoo</title>
+  <title>Susanoo <%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -34,9 +34,9 @@
         </div>
         <ul>
           <li><%= link_to t('.home'), store_path %></li>
-          <li><a href="http://www.../faq"><%= t('.questions') %></a></li>
-          <li><a href="http://www.../news"><%= t('.news') %></a></li>
-          <li><a href="http://www.../contact"><%= t('.contact') %></a></li>
+          <li><%= link_to t('.questions'), questions_path %></li>
+          <li><%= link_to t('.news'), news_path %></li>
+          <li><%= link_to t('.contact'), contact_path %></li>
         </ul>
         <% if session[:user_id] %>
         <ul>
@@ -55,10 +55,23 @@
 
     <div class="footer">
       <div class="links">
-        <a href="#">About</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
+        <ul>
+          <li><h3>Content</h3></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+        <ul>
+        <li><h3>Follow Us</h3></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        </ul>
+        <ul>
+          <li><h3>Legal</h3></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
       </div>
+      <hr>
       <div class="copyright">Michael Zelenyuk, 2015</div>
       <div class="image">
       <%= image_tag("footer_logo.jpg") %></div>

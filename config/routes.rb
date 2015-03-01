@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
@@ -9,6 +10,12 @@ Rails.application.routes.draw do
   resources :users
 
   get 'store/index'
+
+  get 'questions' => 'static_pages#questions'
+
+  get 'news' => 'static_pages#news'
+
+  get 'contact' => 'static_pages#contact'
 
   resources :products do
     get :who_bought, on: :member

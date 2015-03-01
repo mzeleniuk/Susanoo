@@ -133,28 +133,49 @@ html, body {
 
 .footer {
   background: #767679;
+  ul {
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 23%;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  h3 {
+    color: #ffffff;
+  }
+  a {
+    text-decoration: none;
+    color: #EAEAEA;
+    }
+  a:hover {
+    color: #ffffff;
+    background-color: transparent;
+  }
   .links {
     display: inline-block;
-    padding-top: 50px;
-    width: 100%;
-    text-align: center;
+    width: 50%;
+    margin-left: 35%;
     font-size: 18px;
-    a {
-      text-decoration: none;
-      color: #eaeaea;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
   }
   .copyright {
-    padding-top: 40px;
+    padding-top: 5px;
     width: 100%;
     text-align: center;
     font-size: 14px;
     color: #eaeaea;
   }
   .image {
-    padding-top: 20px;
+    padding-top: 10px;
     margin-left: 42%;
+  }
+  hr {
+    border: 1px solid;
+    margin: 0 auto;
+    width: 20em;
   }
 }
