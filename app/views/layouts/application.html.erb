@@ -19,8 +19,7 @@
           <%= submit_tag 'submit' %>
           <%= javascript_tag "$('.locale input').hide()" %>
           <% end %>
-      <%= image_tag("bookshelf.png", size: "45x45") %>
-      <%= @page_title || t('.title') %>
+      <%= @page_title || t('.title_html') %>
     </div>
 
     <div id="columns">
@@ -33,10 +32,10 @@
           <% end %>
         </div>
         <ul>
-          <li><%= link_to t('.home'), store_path %></li>
-          <li><%= link_to t('.questions'), questions_path %></li>
-          <li><%= link_to t('.news'), news_path %></li>
-          <li><%= link_to t('.contact'), contact_path %></li>
+          <li><%= link_to t('.home_html'), store_path %></li>
+          <li><%= link_to t('.questions_html'), questions_path %></li>
+          <li><%= link_to t('.news_html'), news_path %></li>
+          <li><%= link_to t('.contact_html'), contact_path %></li>
         </ul>
         <% if session[:user_id] %>
         <ul>
@@ -57,18 +56,18 @@
       <div class="links">
         <ul>
           <li><h3>Content</h3></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><%= link_to t('.about_html'), about_path %></li>
+            <li><%= link_to t('.contact_html'), contact_path %></li>
         </ul>
         <ul>
         <li><h3>Follow Us</h3></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
+        <li><a href="https://www.facebook.com">Facebook</a></li>
+        <li><a href="https://twitter.com">Twitter</a></li>
         </ul>
         <ul>
           <li><h3>Legal</h3></li>
-          <li><a href="#">Terms and Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><%= link_to t('.terms_html'), terms_path %></li>
+          <li><%= link_to t('.privacy_html'), privacy_path %></li>
         </ul>
       </div>
       <hr>

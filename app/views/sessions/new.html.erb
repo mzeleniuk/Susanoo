@@ -8,13 +8,11 @@
         <legend>Please Log In</legend>
 
         <div>
-          <%= label_tag :name, 'Name:' %>
-          <%= text_field_tag :name, params[:name] %>
+          <%= text_field_tag :name, params[:name], size: 30, placeholder: 'Enter Your Name' %>
         </div>
 
         <div>
-          <%= label_tag :password, 'Password:' %>
-          <%= password_field_tag :password, params[:password] %>
+          <%= password_field_tag :password, params[:password], size: 30, placeholder: 'Enter Your Password' %>
         </div>
 
         <div>

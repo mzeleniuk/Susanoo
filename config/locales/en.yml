@@ -2,11 +2,14 @@ en:
 
   layouts:
     application:
-      title: "Susanoo"
-      home: "Home"
-      questions: "Questions"
-      news: "News"
-      contact: "Contact"
+      title_html: "Susanoo"
+      home_html: "Home"
+      questions_html: "Questions"
+      news_html: "News"
+      contact_html: "Contact"
+      about_html: "About"
+      terms_html: "Terms and Conditions"
+      privacy_html: "Privacy Policy"
 
   store:
     index:
