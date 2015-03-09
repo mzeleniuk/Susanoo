@@ -120,4 +120,7 @@
       <primary-key columns="id"/>
     </table>
   </data-source>
+  <data-source name="Rails Susanoo: production" uuid="87d510fe-f2c4-4527-8702-c95e61209aff">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>

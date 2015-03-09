@@ -3,7 +3,7 @@
 <% end %>
 
 <% if !session[:user_id] %>
-    <%= button_to t('.login_html'), login_url, method: :get, style: "float: right" %>
+    <%= button_to t('.login_html'), login_url, method: :get, style: "float: right", :class => 'button' %>
 <% end %>
 
 <h1><%= t('.title_html') %></h1>
@@ -16,7 +16,8 @@
             <%= sanitize(product.description) %>
       <div class="price_line">
             <span class="price"><%= number_to_currency(product.price) %></span>
-            <%= button_to t('.add_html'), line_items_path(product_id: product), remote: true %>
+            <%= button_to t('.add_html'), line_items_path(product_id: product), remote: true,
+                          :class => 'button' %>
       </div>
         </div>
         <% end %>

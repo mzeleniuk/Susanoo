@@ -8,6 +8,7 @@
   </tr>
 </table>
 
-<%= button_to t('.checkout_html'), new_order_path, method: :get %>
-<%= button_to t('.empty_html'), cart, method: :delete,
+<%= button_to t('.checkout_html'), new_order_path, method: :get, :class => 'button' %>
+<br><br>
+<%= button_to t('.empty_html'), cart, method: :delete, :class => 'button',
               data: { confirm: t('.empty_confirm_html') } %>
