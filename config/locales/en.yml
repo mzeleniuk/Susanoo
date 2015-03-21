@@ -6,8 +6,11 @@ en:
       home_html: "Home"
       questions_html: "Questions"
       news_html: "News"
+      content_html: "Content"
       contact_html: "Contact"
       about_html: "About"
+      follow_html: "Follow Us"
+      legal_html: "Legal"
       terms_html: "Terms and Conditions"
       privacy_html: "Privacy Policy"
 
@@ -32,6 +35,27 @@ en:
         separator: "."
         delimiter: ","
         format: "%u%n"
+
+  activerecord:
+    errors:
+      messages:
+        inclusion: "not included"
+        blank: "can't be blank"
+    models:
+      order: "order"
+    attributes:
+      order:
+        address: "Address"
+        name: "Name"
+        email: "Email"
+        pay_type: "Pay type"
+
+  errors:
+    template:
+      body: "There were problems with the following fields:"
+      header:
+        one: "1 error prohibited this %{model} from being saved"
+        other: "%{count} errors prohibited this %{model} from being saved"
 
   orders:
     new:

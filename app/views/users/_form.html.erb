@@ -17,25 +17,23 @@
     <legend>Enter User Details</legend>
 
   <div class="field">
-    <%= f.label :name, 'Name:' %><br>
-    <%= f.text_field :name, size: 40 %>
+    <%= f.text_field :name, size: 40, placeholder: 'Name', :class => 'input_field' %>
   </div>
     <% if params[:action] == 'edit' || params[:action] == 'update' %>
         <div class="field">
-          <%= f.label :current_password, 'Current password:' %><br>
-          <%= f.password_field :current_password, size: 40 %>
+          <%= f.password_field :current_password, size: 40, placeholder: 'Current password',
+                               :class => 'input_field' %>
         </div>
     <% end %>
   <div class="field">
-    <%= f.label :password, 'Password:' %><br>
-    <%= f.password_field :password, size: 40 %>
+    <%= f.password_field :password, size: 40, placeholder: 'New password', :class => 'input_field' %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, 'Confirm:' %><br>
-    <%= f.password_field :password_confirmation, size: 40 %>
+    <%= f.password_field :password_confirmation, size: 40, placeholder: 'Confirm new password',
+                         :class => 'input_field' %>
   </div>
   <div class="actions">
-    <%= f.submit :class => 'button' %>
+    <%= f.submit :class => 'button_primary' %>
   </div>
 
   </fieldset>

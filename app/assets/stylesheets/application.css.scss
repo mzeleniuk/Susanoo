@@ -56,9 +56,6 @@ html, body {
     form, div {
       display: inline;
     }
-    input {
-      font-size: small;
-    }
     #cart {
       font-size: smaller;
       color: #ffffff;
@@ -72,9 +69,14 @@ html, body {
       padding: 0;
       li {
         list-style: none;
+        padding-bottom: 10px;
         a {
           color: #bfb;
-          font-size: small;
+          font-size: 16px;
+          text-decoration: none;
+          &:hover {
+            color: #ffffff;
+          }
         }
       }
     }
@@ -86,7 +88,7 @@ html, body {
     background: #efe;
     legend {
       color: #dfd;
-      background: #141;
+      background: #451152;
       font-family: sans-serif;
       padding: 0.2em 1em;
     }
@@ -181,9 +183,25 @@ html, body {
 }
 
 .button {
-  background: #97c93c;
-  border: 2px solid #97c93c;
+  background: #582964;
+  border: 2px solid #582964;
   border-radius: 5px;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ffffff;
+}
+
+.button_primary {
+  background: #582964;
+  border: 2px solid #582964;
+  border-radius: 5px;
+  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+
+.input_field {
+  border-radius: 5px;
+  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #383737;
+  padding-left: 10px;
+  border: 2px solid #582964;
 }

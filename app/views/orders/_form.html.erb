@@ -14,22 +14,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name, t('.name_html') %><br>
-    <%= f.text_field :name, size: 40 %>
+    <%= f.text_field :name, size: 40, placeholder: t('.name_html'), :class => 'input_field' %>
   </div>
+
   <div class="field">
-    <%= f.label :address, t('.address_html') %><br>
-    <%= f.text_area :address, rows: 3, cols: 40 %>
+    <%= f.text_area :address, rows: 3, cols: 39, placeholder: t('.address_html'), :class => 'input_field' %>
   </div>
+
   <div class="field">
-    <%= f.label :email, t('.email_html') %><br>
-    <%= f.text_field :email, size: 40 %>
+    <%= f.text_field :email, size: 40, placeholder: t('.email_html'), :class => 'input_field' %>
   </div>
+
   <div class="field">
     <%= f.label :pay_type, t('.pay_type_html') %><br>
     <%= f.select :pay_type, payment_type_options, prompt: t('.pay_prompt_html') %>
   </div>
   <div class="actions">
-    <%= f.submit t('.submit_html'), :class => 'button' %>
+    <%= f.submit t('.submit_html'), :class => 'button_primary' %>
   </div>
 <% end %>

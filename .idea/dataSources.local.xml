@@ -5,7 +5,6 @@
     <data-source name="Rails Susanoo: test" uuid="4309c55b-bb3a-4672-b7a1-8bc510dc4c6c" />
     <data-source name="Rails Susanoo: production" uuid="87d510fe-f2c4-4527-8702-c95e61209aff">
       <first-sync>true</first-sync>
-      <user-name>zell</user-name>
     </data-source>
   </component>
 </project>

@@ -14,7 +14,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: susanoo_db
+  database:
   pool: 5
-  username: zell
+  username:
   password:
