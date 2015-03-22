@@ -3,14 +3,14 @@
     margin: 0;
     padding-bottom: 0.5em;
     font: 150% sans-serif;
-    color: #226;
-    border-bottom: 3px dotted #77d;
+    color: #451152;
+    border-bottom: 3px solid #f2f2f2;
   }
 
   .entry {
     overflow: auto;
     margin-top: 1em;
-    border-bottom: 1px dotted #77d;
+    border-bottom: 1px solid #451152;
     min-height: 100px;
     img {
       width: 80px;
@@ -22,9 +22,9 @@
       font-size: 120%;
       font-family: sans-serif;
       margin-left: 100px;
-      margin-top: 0px;
+      margin-top: 2px;
       margin-bottom: 2px;
-      color: #227;
+      color: #451152;
     }
     p, div.price_line {
       margin-left: 100px;
@@ -35,7 +35,7 @@
       }
     }
     .price {
-      color: #44a;
+      color: #451152;
       font-weight: bold;
       margin-left: 3em;
     }

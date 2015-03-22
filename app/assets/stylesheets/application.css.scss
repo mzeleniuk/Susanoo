@@ -21,11 +21,11 @@ html, body {
 }
 
 #banner {
-  background: #9c9;
+  background: url("citybanner.png") bottom;
   padding: 10px;
   border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  font: 50px/40px "Helvetica Neue", serif;
+  color: #451152;
   text-align: center;
   img {
     float: left;
@@ -42,7 +42,7 @@ html, body {
 }
 
 #columns {
-  background: #141;
+  background: #f2f2f2;
   #main {
     margin-left: 17em;
     padding: 1em;
@@ -52,17 +52,16 @@ html, body {
     float: left;
     padding: 1em 2em;
     width: 13em;
-    background: #141;
+    background: #f2f2f2;
     form, div {
       display: inline;
     }
     #cart {
-      font-size: smaller;
-      color: #ffffff;
+      color: #666;
       table {
-        border-top: 1px dotted #595;
-        border-bottom: 1px dotted #595;
-        margin-bottom: 10px;
+        border-top: 2px solid #451152;
+        border-bottom: 2px solid #451152;
+        margin-bottom: 20px;
       }
     }
     ul {
@@ -71,11 +70,11 @@ html, body {
         list-style: none;
         padding-bottom: 10px;
         a {
-          color: #bfb;
+          color: #666;
           font-size: 16px;
           text-decoration: none;
           &:hover {
-            color: #ffffff;
+            color: #999;
           }
         }
       }
