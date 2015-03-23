@@ -21,10 +21,11 @@ html, body {
 }
 
 #banner {
-  background: url("citybanner.png") bottom;
+  background-image: image-url("citybanner.png");
+  background-position: bottom;
   padding: 10px;
   border-bottom: 2px solid;
-  font: 50px/40px "Helvetica Neue", serif;
+  font: 50px/40px "Arial", serif;
   color: #451152;
   text-align: center;
   img {
@@ -203,4 +204,17 @@ html, body {
   color: #383737;
   padding-left: 10px;
   border: 2px solid #582964;
+}
+
+.dropdown select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #ffffff;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 2px solid #582964;
+  border-radius: 5px;
+  cursor: pointer;
+  background: url(arrow-204-16.png) no-repeat #582964;
+  background-position: 175px 2px;
+  width: 200px;
 }
