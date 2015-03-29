@@ -35,11 +35,12 @@ html, body {
 
 #notice {
   color: #000 !important;
-  border: 2px solid red;
+  border: 2px solid #582964;
+  border-radius: 5px;
   padding: 1em;
   margin-bottom: 2em;
-  background-color: #f0f0f0;
-  font: bold smaller sans-serif;
+  background-color: #f2f2f2;
+  font: bold 14px sans-serif;
 }
 
 #columns {
@@ -85,10 +86,13 @@ html, body {
 
 .Susanoo_form {
   fieldset {
-    background: #efe;
+    background: #f2f2f2;
+    border: 2px solid #582964;
+    border-radius: 5px;
     legend {
-      color: #dfd;
+      color: #ffffff;
       background: #451152;
+      border-radius: 5px;
       font-family: sans-serif;
       padding: 0.2em 1em;
     }
@@ -120,8 +124,7 @@ html, body {
 }
 
 .page-wrap {
-  min-height: 100%;
-  margin-bottom: -300px;
+  min-height: 78%;
 }
 
 .page-wrap:after {
@@ -129,12 +132,12 @@ html, body {
   display: block;
 }
 
-.footer, .page-wrap:after {
-  height: 300px;
-}
-
 .footer {
   background: #767679;
+  height: 300px;
+  clear: both;
+  position: relative;
+  z-index: 10;
   ul {
     float: left;
     display: block;
@@ -206,7 +209,22 @@ html, body {
   border: 2px solid #582964;
 }
 
-.dropdown select {
+.payment_dropdown select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #ffffff;
+  font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 2px solid #582964;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: image-url("arrow-204-16.png");
+  background-repeat: no-repeat;
+  background-color: #582964;
+  background-position: 240px 6px;
+  width: 265px;
+}
+
+.locale select {
   -webkit-appearance: none;
   -moz-appearance: none;
   color: #ffffff;
@@ -214,7 +232,9 @@ html, body {
   border: 2px solid #582964;
   border-radius: 5px;
   cursor: pointer;
-  background: url(arrow-204-16.png) no-repeat #582964;
-  background-position: 175px 2px;
-  width: 200px;
+  background-image: image-url("arrow-204-16.png");
+  background-repeat: no-repeat;
+  background-color: #582964;
+  background-position: 85px 2px;
+  width: 110px;
 }

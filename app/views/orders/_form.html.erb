@@ -25,8 +25,7 @@
     <%= f.text_field :email, size: 40, placeholder: t('.email_html'), :class => 'input_field' %>
   </div>
 
-  <div class="field dropdown">
-    <%= f.label :pay_type, t('.pay_type_html') %><br>
+  <div class="field payment_dropdown">
     <%= f.select :pay_type, payment_type_options, prompt: t('.pay_prompt_html') %>
   </div>
   <div class="actions">
