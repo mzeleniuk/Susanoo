@@ -19,9 +19,10 @@
           <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
-    <% end %>
+  <% end %>
 </table>
 
-<br />
+<br>
 
+<p><%= paginate @products %></p>
 <%= link_to 'New Product', new_product_path %>

@@ -1,5 +1,5 @@
 <% if notice %>
-    <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 <% end %>
 
 <h1>Listing Orders</h1>
@@ -32,4 +32,5 @@
 
 <br>
 
+<p><%= paginate @orders %></p>
 <%= link_to 'New Order', new_order_path %>

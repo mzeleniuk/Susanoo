@@ -14,6 +14,13 @@ en:
       terms_html: "Terms and Conditions"
       privacy_html: "Privacy Policy"
 
+  views:
+    pagination:
+      first: "&lt;&lt; First"
+      previous: "&lt; Previous"
+      next: "Next &gt;"
+      last: "Last &gt;&gt;"
+
   store:
     index:
       login_html: "Login"

@@ -1,6 +1,6 @@
 <div class="Susanoo_form">
   <% if flash[:alert] %>
-      <p id="notice"><%= flash[:alert] %></p>
+  <p id="notice"><%= flash[:alert] %></p>
   <% end %>
 
   <%= form_tag do %>
@@ -18,7 +18,7 @@
         </div>
 
         <div>
-          <%= submit_tag "Login", :class => 'button_primary' %>
+          <%= submit_tag 'Login', :class => 'button_primary' %>
         </div>
       </fieldset>
   <% end %>

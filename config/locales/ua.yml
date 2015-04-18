@@ -14,6 +14,13 @@ ua:
       terms_html: "Терміни і Умови"
       privacy_html: "Конфіденційність"
 
+  views:
+    pagination:
+      first: "&lt;&lt; Перша"
+      previous: "&lt; Попередня"
+      next: "Наступна &gt;"
+      last: "Остання &gt;&gt;"
+
   store:
     index:
       login_html: Увійти"
