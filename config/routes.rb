@@ -25,6 +25,8 @@ Rails.application.routes.draw do
     resources :orders
     resources :line_items
     resources :carts
+    resources :products
+    resources :users
     root to: 'store#index', as: 'store', via: :all
   end
 end
