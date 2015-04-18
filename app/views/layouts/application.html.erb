@@ -7,21 +7,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-
 <body class="<%= controller.controller_name %>">
-<div class="page-wrap">
-
+  <div class="page-wrap">
     <div id="banner">
       <%= form_tag store_path, class: 'locale' do %>
-          <%= select_tag 'set_locale',
-                         options_for_select(LANGUAGES, I18n.locale.to_s),
-                         onchange: 'this.form.submit()' %>
-          <%= submit_tag 'submit' %>
-          <%= javascript_tag "$('.locale input').hide()" %>
-          <% end %>
+        <%= select_tag 'set_locale',
+                       options_for_select(LANGUAGES, I18n.locale.to_s),
+                       onchange: 'this.form.submit()' %>
+        <%= submit_tag 'submit' %>
+        <%= javascript_tag "$('.locale input').hide()" %>
+      <% end %>
       <%= @page_title || t('.title_html') %>
     </div>
-
     <div id="columns">
       <div id="side">
         <div id="cart">
@@ -44,38 +41,34 @@
           <li><%= link_to 'Products', products_path %></li>
           <li><%= link_to 'Users', users_path %></li>
         </ul>
-            <%= button_to 'Logout', logout_path, method: :delete, :class => 'button' %>
-            <% end %>
+        <%= button_to 'Logout', logout_path, method: :delete, :class => 'button' %>
+        <% end %>
       </div>
       <div id="main">
         <%= yield %>
       </div>
     </div>
-</div>
-
-    <div class="footer">
-      <div class="links">
-        <ul>
-          <li><h3><%= t('.content_html') %></h3></li>
-            <li><%= link_to t('.about_html'), about_path %></li>
-            <li><%= link_to t('.contact_html'), contact_path %></li>
-        </ul>
-        <ul>
+  </div>
+  <div class="footer">
+    <div class="links">
+      <ul>
+        <li><h3><%= t('.content_html') %></h3></li>
+          <li><%= link_to t('.about_html'), about_path %></li>
+          <li><%= link_to t('.contact_html'), contact_path %></li>
+      </ul>
+      <ul>
         <li><h3><%= t('.follow_html') %></h3></li>
-        <li><a href="https://www.facebook.com">Facebook</a></li>
-        <li><a href="https://twitter.com">Twitter</a></li>
-        </ul>
-        <ul>
-          <li><h3><%= t('.legal_html') %></h3></li>
+          <li><a href="https://www.facebook.com">Facebook</a></li>
+          <li><a href="https://twitter.com">Twitter</a></li>
+      </ul>
+      <ul>
+        <li><h3><%= t('.legal_html') %></h3></li>
           <li><%= link_to t('.terms_html'), terms_path %></li>
           <li><%= link_to t('.privacy_html'), privacy_path %></li>
-        </ul>
-      </div>
-      <hr>
-      <div class="copyright">Michael Zelenyuk, 2015</div>
-      <div class="image">
-      <%= image_tag('footer_logo.jpg') %></div>
+      </ul>
     </div>
-
+    <hr>
+    <div class="copyright">Michael Zelenyuk, 2015</div>
+  </div>
 </body>
 </html>

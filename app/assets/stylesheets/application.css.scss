@@ -1,18 +1,5 @@
-/*
-* This is a manifest file that'll be compiled into application.css, which will include all the files
-* listed below.
-*
-* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
-* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
-*
-* You're free to add application-wide styles to this file and they'll appear at the bottom of the
-* compiled file so the styles you add here take precedence over styles defined in any styles
-* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
-* file per style scope.
-*
-*= require_tree .
-*= require_self
-*/
+//= require_tree .
+//= require_self
 
 html, body {
   width: 100%;
@@ -124,7 +111,7 @@ html, body {
 }
 
 .page-wrap {
-  min-height: 78%;
+  min-height: 74%;
 }
 
 .page-wrap:after {
@@ -138,20 +125,21 @@ html, body {
   clear: both;
   position: relative;
   z-index: 10;
+  line-height: 6em;
   ul {
     float: left;
     display: block;
-    margin-right: 2%;
-    width: 23%;
+    width: 30%;
     padding: 0;
   }
   li {
     list-style: none;
     text-decoration: none;
-    line-height: 1.5em;
+    line-height: 2.5em;
   }
   h3 {
     color: #ffffff;
+    padding-top: 1em;
   }
   a {
     text-decoration: none;
@@ -163,8 +151,8 @@ html, body {
   }
   .links {
     display: inline-block;
-    width: 50%;
-    margin-left: 35%;
+    width: 60%;
+    margin-left: 30%;
     font-size: 18px;
   }
   .copyright {
@@ -173,10 +161,6 @@ html, body {
     text-align: center;
     font-size: 14px;
     color: #eaeaea;
-  }
-  .image {
-    padding-top: 10px;
-    margin-left: 42%;
   }
   hr {
     border: 1px solid;
@@ -191,6 +175,11 @@ html, body {
   border-radius: 5px;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ffffff;
+  cursor: pointer;
+  &:hover {
+    background: #6E5494;
+    border-color: #6E5494;
+  }
 }
 
 .button_primary {
@@ -199,6 +188,11 @@ html, body {
   border-radius: 5px;
   font: 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #ffffff;
+  cursor: pointer;
+  &:hover {
+    background: #6E5494;
+    border-color: #6E5494;
+  }
 }
 
 .input_field {
