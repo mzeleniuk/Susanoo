@@ -4,7 +4,7 @@ class StaticPagesControllerTest < ActionController::TestCase
   test 'should get questions' do
     get :questions
     assert_response :success
-    assert_select 'title', 'Susanoo | FAQ'
+    assert_select 'title', 'Susanoo | Questions'
   end
 
   test 'should get news' do
@@ -22,7 +22,7 @@ class StaticPagesControllerTest < ActionController::TestCase
   test 'should get about' do
     get :about
     assert_response :success
-    assert_select 'title', 'Susanoo | About'
+    assert_select 'title', 'Susanoo | About Us'
   end
 
   test 'should get terms' do

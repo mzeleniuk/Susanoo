@@ -1,5 +1,12 @@
 ua:
 
+  carts:
+    cart:
+      title_html: "Ваш Кошик"
+      checkout_html: "Оформити"
+      empty_html: "Очистити Кошик"
+      empty_confirm_html: "Ви впевнені?"
+
   layouts:
     application:
       title_html: "Susanoo"
@@ -14,12 +21,51 @@ ua:
       terms_html: "Терміни і Умови"
       privacy_html: "Конфіденційність"
 
-  views:
-    pagination:
-      first: "&lt;&lt; Перша"
-      previous: "&lt; Попередня"
-      next: "Наступна &gt;"
-      last: "Остання &gt;&gt;"
+  orders:
+    new:
+      legend_html: "Будь ласка, заповніть наступну форму"
+    form:
+      name_html: "Ваше ім’я"
+      address_html: "Адреса"
+      email_html: "Електронна пошта"
+      pay_type_html: "Спосіб оплати"
+      pay_prompt_html: "Оберіть спосіб оплати"
+      submit_html: "Розмістити замовлення"
+    payment_types:
+      check: "Оплата чеком"
+      credit_card: "Кредитна картка"
+      purchase_order: "Оплата при отриманні"
+
+  sessions:
+    new:
+      legend_html: "Будь ласка, увійдіть в систему"
+      name_html: "Ваше ім’я"
+      password_html: "Ваш пароль"
+      login_html: "Увійти"
+
+  static_pages:
+    about:
+      about_html: "Про нас"
+      paragraph1_html: "На цій сторінці буде знаходитись інформація про команду Susanoo."
+    contact:
+      contact_html: "Контакти"
+      paragraph1_html: "На цій сторінці буде знаходитись контактна інформація
+                       адміністрації Susanoo."
+    news:
+      news_html: "Новини"
+      paragraph1_html: "Останні новини проекту Susanoo будуть публікуватися на цій сторінці."
+    privacy:
+      privacy_html: "Конфіденційність"
+      paragraph1_html: "Всі положення нашої Політики конфіденційності будуть опубліковані
+                       на цій сторінці."
+    questions:
+      questions_html: "Довідка"
+      paragraph1_html: "На цій сторінці будуть знаходитися відповіді на найпопулярніші
+                       питання."
+    terms:
+      terms_html: "Терміни і Умови"
+      paragraph1_html: "Наші Терміни і Умови користування будуть опубліковані на цій
+                       сторінці."
 
   store:
     index:
@@ -27,12 +73,12 @@ ua:
       title_html: "Каталог Susanoo"
       add_html: "Додати до Кошика"
 
-  carts:
-    cart:
-      title_html: "Ваш Кошик"
-      checkout_html: "Оформити"
-      empty_html: "Очистити Кошик"
-      empty_confirm_html: "Ви впевнені?"
+  views:
+    pagination:
+      first: "&lt;&lt; Перша"
+      previous: "&lt; Попередня"
+      next: "Наступна &gt;"
+      last: "Остання &gt;&gt;"
 
   number:
     currency:
@@ -63,20 +109,5 @@ ua:
       header:
         one: "1 помилка не дозволяє розмістити Ваше замовлення"
         other: "%{count} помилки не дозволяють розмістити Ваше замовлення"
-
-  orders:
-    new:
-      legend_html: "Будь ласка, заповніть наступну форму"
-    form:
-      name_html: "Ваше ім’я"
-      address_html: "Адреса"
-      email_html: "Електронна пошта"
-      pay_type_html: "Спосіб оплати"
-      pay_prompt_html: "Оберіть спосіб оплати"
-      submit_html: "Розмістити замовлення"
-    payment_types:
-      check: "Оплата чеком"
-      credit_card: "Кредитна картка"
-      purchase_order: "Оплата при отриманні"
 
   thanks_html: "Дякуємо за Ваше замовлення!"

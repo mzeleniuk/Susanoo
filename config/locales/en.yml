@@ -1,5 +1,12 @@
 en:
 
+  carts:
+    cart:
+      title_html: "Your Cart"
+      checkout_html: "Checkout"
+      empty_html: "Empty Cart"
+      empty_confirm_html: "Are you sure?"
+
   layouts:
     application:
       title_html: "Susanoo"
@@ -8,18 +15,53 @@ en:
       news_html: "News"
       content_html: "Content"
       contact_html: "Contact"
-      about_html: "About"
+      about_html: "About Us"
       follow_html: "Follow Us"
       legal_html: "Legal"
       terms_html: "Terms and Conditions"
       privacy_html: "Privacy Policy"
 
-  views:
-    pagination:
-      first: "&lt;&lt; First"
-      previous: "&lt; Previous"
-      next: "Next &gt;"
-      last: "Last &gt;&gt;"
+  orders:
+    new:
+      legend_html: "Please Enter Your Details"
+    form:
+      name_html: "Name"
+      address_html: "Address"
+      email_html: "E-mail"
+      pay_type_html: "Pay with"
+      pay_prompt_html: "Select a payment method"
+      submit_html: "Place Order"
+    payment_types:
+      check: "Check"
+      credit_card: "Credit Card"
+      purchase_order: "Purchase Order"
+
+  sessions:
+    new:
+      legend_html: "Please Log In"
+      name_html: "Enter Your Name"
+      password_html: "Enter Your Password"
+      login_html: "Login"
+
+  static_pages:
+    about:
+      about_html: "About Us"
+      paragraph1_html: "Here is the information about Susanoo team."
+    contact:
+      contact_html: "Contact"
+      paragraph1_html: "Here you can contact with the administration of Susanoo."
+    news:
+      news_html: "News"
+      paragraph1_html: "Here is the latest news about Susanoo."
+    privacy:
+      privacy_html: "Privacy Policy"
+      paragraph1_html: "Here is our Privacy Policy."
+    questions:
+      questions_html: "Questions"
+      paragraph1_html: "Here you can find answers for the most frequently asked questions."
+    terms:
+      terms_html: "Terms and Conditions"
+      paragraph1_html: "Here is our Terms and Conditions."
 
   store:
     index:
@@ -27,12 +69,12 @@ en:
       title_html: "Susanoo Catalog"
       add_html: "Add to Cart"
 
-  carts:
-    cart:
-      title_html: "Your Cart"
-      checkout_html: "Checkout"
-      empty_html: "Empty Cart"
-      empty_confirm_html: "Are you sure?"
+  views:
+    pagination:
+      first: "&lt;&lt; First"
+      previous: "&lt; Previous"
+      next: "Next &gt;"
+      last: "Last &gt;&gt;"
 
   number:
     currency:
@@ -63,20 +105,5 @@ en:
       header:
         one: "1 error prohibited this %{model} from being saved"
         other: "%{count} errors prohibited this %{model} from being saved"
-
-  orders:
-    new:
-      legend_html: "Please Enter Your Details"
-    form:
-      name_html: "Name"
-      address_html: "Address"
-      email_html: "E-mail"
-      pay_type_html: "Pay with"
-      pay_prompt_html: "Select a payment method"
-      submit_html: "Place Order"
-    payment_types:
-      check: "Check"
-      credit_card: "Credit Card"
-      purchase_order: "Purchase Order"
 
   thanks_html: "Thank you for your order!"
