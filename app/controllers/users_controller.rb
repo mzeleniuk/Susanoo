@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_cart
+  include CurrentCart
 
   def index
     @users = User.order(:name).page(params[:page])

@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
   skip_before_action :authorize
+  before_action :set_cart
+  include CurrentCart
 
   def questions
   end

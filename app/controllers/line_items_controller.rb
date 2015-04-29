@@ -1,8 +1,8 @@
 class LineItemsController < ApplicationController
   skip_before_action :authorize, only: :create
-  include CurrentCart
-  before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_cart
+  include CurrentCart
 
   def index
     @line_items = LineItem.order('created_at desc').page(params[:page])

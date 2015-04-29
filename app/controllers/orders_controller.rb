@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
   skip_before_action :authorize, only: [:new, :create]
-  include CurrentCart
-  before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_cart
+  include CurrentCart
 
   def index
     @orders = Order.order('created_at desc').page(params[:page])

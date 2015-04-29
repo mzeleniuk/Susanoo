@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_cart
+  include CurrentCart
 
   def index
     @products = Product.order('created_at desc').page(params[:page])
