@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
+  after_destroy :ensure_an_admin_remains
+
   validates :name, presence: true, uniqueness: true
   validates :password, presence: true
-  has_secure_password
 
-  after_destroy :ensure_an_admin_remains
+  has_secure_password
 
   private
 
