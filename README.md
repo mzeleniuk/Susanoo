@@ -1,5 +1,7 @@
 # Susanoo
 
+[![Circle CI](https://circleci.com/gh/mzelenyuk/Susanoo/tree/master.svg?style=svg&circle-token=19611f19cebd2240172f7c9132142dfae265953d)](https://circleci.com/gh/mzelenyuk/Susanoo/tree/master)
+
 Susanoo - Internet Bookshop.
 
 Seller is able to place new products, add description, picture and price.
