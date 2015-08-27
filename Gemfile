@@ -13,6 +13,9 @@ gem 'sdoc', '0.4.1', group: :doc
 gem 'bcrypt', '3.1.10'
 gem 'kaminari', '0.16.3'
 
+# Test coverage
+gem 'simplecov', '0.10.0', require: false, group: :test
+
 group :development, :test do
   gem 'sqlite3', '1.3.10'
   gem 'byebug', '4.0.5'

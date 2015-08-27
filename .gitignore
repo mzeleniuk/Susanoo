@@ -10,3 +10,6 @@
 !/log/.keep
 /tmp
 .idea
+
+# SimpleCov test coverage
+/coverage
