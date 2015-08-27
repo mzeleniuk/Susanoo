@@ -18,9 +18,15 @@ class UsersControllerTest < ActionController::TestCase
 
   test 'should create user' do
     assert_difference('User.count') do
-      post :create, user: { name: 'Dave', password: 'secret', password_confirmation: 'secret' }
+      post :create, user: {name: 'Dave', password: 'secret', password_confirmation: 'secret'}
     end
     assert_redirected_to users_path
+  end
+
+  test 'should not create user' do
+    assert_no_difference('User.count') do
+      post :create, user: {name: nil, password: 'secret', password_confirmation: 'secret'}
+    end
   end
 
   test 'should show user' do
@@ -34,9 +40,15 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test 'should update user' do
-    patch :update, id: @user, user: { name: @user.name, current_password: 'secret',
-                                      password: 'secret', password_confirmation: 'secret' }
+    patch :update, id: @user, user: {name: @user.name, current_password: 'secret',
+                                     password: 'secret', password_confirmation: 'secret'}
     assert_redirected_to users_path
+  end
+
+  test 'should not update user' do
+    patch :update, id: @user, user: {name: nil, current_password: 'secret',
+                                     password: 'secret', password_confirmation: 'secret'}
+    assert_not_nil @user.name
   end
 
   test 'should destroy user' do

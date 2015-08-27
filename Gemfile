@@ -15,6 +15,7 @@ gem 'kaminari', '0.16.3'
 
 # Test coverage
 gem 'simplecov', '0.10.0', require: false, group: :test
+gem 'codeclimate-test-reporter', '0.4.7', group: :test, require: nil
 
 group :development, :test do
   gem 'sqlite3', '1.3.10'

@@ -29,6 +29,12 @@ class ProductsControllerTest < ActionController::TestCase
     assert_redirected_to product_path(assigns(:product))
   end
 
+  test 'should not create product' do
+    assert_no_difference('Product.count') do
+      post :create, product: {title: nil}
+    end
+  end
+
   test 'should show product' do
     get :show, id: @product
     assert_response :success
@@ -42,6 +48,11 @@ class ProductsControllerTest < ActionController::TestCase
   test 'should update product' do
     patch :update, id: @product, product: @update
     assert_redirected_to product_path(assigns(:product))
+  end
+
+  test 'should not update product' do
+    post :update, id: @product, product: {title: nil}
+    assert_not_nil @product.title
   end
 
   test 'should destroy product' do

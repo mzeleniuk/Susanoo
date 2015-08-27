@@ -1,3 +1,7 @@
 general:
   artifacts:
     - 'coverage'
+
+machine:
+  environment:
+    CODECLIMATE_REPO_TOKEN: '5a51238997be18d1875f60d1b56a5507a558e8e47290da47faef0445ca220099'

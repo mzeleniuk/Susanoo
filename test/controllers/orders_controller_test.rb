@@ -23,9 +23,15 @@ class OrdersControllerTest < ActionController::TestCase
 
   test 'should create order' do
     assert_difference('Order.count') do
-      post :create, order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type }
+      post :create, order: {address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type}
     end
     assert_redirected_to store_path
+  end
+
+  test 'should not create order' do
+    assert_no_difference('Order.count') do
+      post :create, order: {address: nil, email: @order.email, name: @order.name, pay_type: @order.pay_type}
+    end
   end
 
   test 'should show order' do
@@ -39,8 +45,13 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
   test 'should update order' do
-    patch :update, id: @order, order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type }
+    patch :update, id: @order, order: {address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type}
     assert_redirected_to order_path(assigns(:order))
+  end
+
+  test 'should not update order' do
+    patch :update, id: @order, order: {address: nil, email: @order.email, name: @order.name, pay_type: 'Wrong'}
+    assert_not_nil @order.address
   end
 
   test 'should destroy order' do
