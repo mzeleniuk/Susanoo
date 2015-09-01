@@ -1,7 +1,8 @@
 class StoreController < ApplicationController
+  include CurrentCart
+
   skip_before_action :authorize
   before_action :set_cart
-  include CurrentCart
 
   def index
     if params[:set_locale]
