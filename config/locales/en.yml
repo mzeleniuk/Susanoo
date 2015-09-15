@@ -15,6 +15,8 @@ en:
       news_html: "News"
       content_html: "Content"
       contact_html: "Contact"
+      logout_html: "Log out"
+      logging_out_html: "Logging out..."
       about_html: "About Us"
       follow_html: "Follow Us"
       legal_html: "Legal"
@@ -31,6 +33,7 @@ en:
       pay_type_html: "Pay with"
       pay_prompt_html: "Select a payment method"
       submit_html: "Place Order"
+      submitting_html: "Placing Order..."
     payment_types:
       check: "Check"
       credit_card: "Credit Card"
@@ -42,6 +45,7 @@ en:
       name_html: "Enter Your Name"
       password_html: "Enter Your Password"
       login_html: "Login"
+      logging_in_html: "Logging in..."
 
   static_pages:
     about:
@@ -68,6 +72,7 @@ en:
       login_html: "Login"
       title_html: "Susanoo Catalog"
       add_html: "Add to Cart"
+      adding_html: "Adding to Cart..."
 
   views:
     pagination:
@@ -90,6 +95,7 @@ en:
       messages:
         inclusion: "not included"
         blank: "can't be blank"
+        invalid: "is invalid"
     models:
       order: "order"
     attributes:

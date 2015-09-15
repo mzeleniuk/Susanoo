@@ -3,32 +3,34 @@
     <div id="error_explanation">
       <h2><%= raw t('errors.template.header', count: @order.errors.count,
                     model: t('activerecord.models.order')) %>.</h2>
+
       <p><%= t('errors.template.body') %></p>
 
       <ul>
-      <% @order.errors.full_messages.each do |message| %>
-        <li><%= raw message %></li>
-      <% end %>
+        <% @order.errors.full_messages.each do |message| %>
+          <li><%= raw message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= f.text_field :name, size: 40, placeholder: t('.name_html'), :class => 'input_field' %>
+    <%= f.text_field :name, size: 40, placeholder: t('.name_html'), class: 'input_field' %>
   </div>
 
   <div class="field">
-    <%= f.text_area :address, rows: 3, cols: 39, placeholder: t('.address_html'), :class => 'input_field' %>
+    <%= f.text_area :address, rows: 3, cols: 39, placeholder: t('.address_html'), class: 'input_field' %>
   </div>
 
   <div class="field">
-    <%= f.text_field :email, size: 40, placeholder: t('.email_html'), :class => 'input_field' %>
+    <%= f.text_field :email, size: 40, placeholder: t('.email_html'), class: 'input_field' %>
   </div>
 
   <div class="field payment_dropdown">
     <%= f.select :pay_type, payment_type_options, prompt: t('.pay_prompt_html') %>
   </div>
+
   <div class="actions">
-    <%= f.submit t('.submit_html'), :class => 'button_primary' %>
+    <%= f.submit t('.submit_html'), class: 'button_primary', data: {disable_with: t('.submitting_html')} %>
   </div>
 <% end %>

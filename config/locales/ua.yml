@@ -15,6 +15,8 @@ ua:
       news_html: "Новини"
       content_html: "Вміст"
       contact_html: "Контакти"
+      logout_html: "Вийти"
+      logging_out_html: "Вихід..."
       about_html: "Про нас"
       follow_html: "Підписуйтесь"
       legal_html: "Право"
@@ -31,6 +33,7 @@ ua:
       pay_type_html: "Спосіб оплати"
       pay_prompt_html: "Оберіть спосіб оплати"
       submit_html: "Розмістити замовлення"
+      submitting_html: "Розміщення замовлення..."
     payment_types:
       check: "Оплата чеком"
       credit_card: "Кредитна картка"
@@ -42,6 +45,7 @@ ua:
       name_html: "Ваше ім’я"
       password_html: "Ваш пароль"
       login_html: "Увійти"
+      logging_in_html: "Вхід..."
 
   static_pages:
     about:
@@ -72,6 +76,7 @@ ua:
       login_html: Увійти"
       title_html: "Каталог Susanoo"
       add_html: "Додати до Кошика"
+      adding_html: "Додавання до Кошика..."
 
   views:
     pagination:
@@ -94,6 +99,7 @@ ua:
       messages:
         inclusion: "не обрано"
         blank: "не вказано"
+        invalid: "введено не вірно"
     models:
       order: "замовлення"
     attributes:

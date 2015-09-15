@@ -1,25 +1,26 @@
 <div class="Susanoo_form">
   <% if flash[:alert] %>
-  <p id="notice"><%= flash[:alert] %></p>
+    <p id="notice"><%= flash[:alert] %></p>
   <% end %>
 
   <%= form_tag do %>
-      <fieldset>
-        <legend><%= t('.legend_html') %></legend>
+    <fieldset>
+      <legend><%= t('.legend_html') %></legend>
 
-        <div class="field">
-          <%= text_field_tag :name, params[:name], size: 30, placeholder: t('.name_html'),
-                             :class => 'input_field' %>
-        </div>
+      <div class="field">
+        <%= text_field_tag :name, params[:name], size: 30, placeholder: t('.name_html'),
+                           class: 'input_field' %>
+      </div>
 
-        <div class="field">
-          <%= password_field_tag :password, params[:password], size: 30, placeholder: t('.password_html'),
-                                 :class => 'input_field' %>
-        </div>
+      <div class="field">
+        <%= password_field_tag :password, params[:password], size: 30, placeholder: t('.password_html'),
+                               class: 'input_field' %>
+      </div>
 
-        <div>
-          <%= submit_tag t('.login_html'), :class => 'button_primary' %>
-        </div>
-      </fieldset>
+      <div>
+        <%= submit_tag t('.login_html'), class: 'button_primary',
+                       data: {disable_with: t('.logging_in_html')} %>
+      </div>
+    </fieldset>
   <% end %>
 </div>

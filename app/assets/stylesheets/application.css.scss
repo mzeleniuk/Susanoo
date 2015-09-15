@@ -8,13 +8,13 @@ html, body {
 }
 
 #banner {
-  background-image: image-url("citybanner.png");
-  background-position: bottom;
+  background: image-url("citybanner.png") bottom;
   padding: 10px;
   border-bottom: 2px solid;
   font: 50px/40px "Arial", serif;
   color: #451152;
   text-align: center;
+  text-shadow: 2px 2px 8px #ffffff;
   cursor: default;
   img {
     float: left;
@@ -34,14 +34,14 @@ html, body {
 #columns {
   background: #f2f2f2;
   #main {
-    margin-left: 17em;
+    margin-left: 22em;
     padding: 1em;
     background: #ffffff;
   }
   #side {
     float: left;
     padding: 1em 2em;
-    width: 13em;
+    width: 18em;
     background: #f2f2f2;
     form, div {
       display: inline;
@@ -145,7 +145,7 @@ html, body {
   a {
     text-decoration: none;
     color: #EAEAEA;
-    }
+  }
   a:hover {
     color: #ffffff;
     background-color: transparent;
@@ -181,6 +181,11 @@ html, body {
     background: #6E5494;
     border-color: #6E5494;
   }
+  &:disabled {
+    background: #6E5494;
+    border-color: #6E5494;
+    cursor: not-allowed;
+  }
 }
 
 .button_primary {
@@ -193,6 +198,11 @@ html, body {
   &:hover {
     background: #6E5494;
     border-color: #6E5494;
+  }
+  &:disabled {
+    background: #6E5494;
+    border-color: #6E5494;
+    cursor: not-allowed;
   }
 }
 
@@ -212,10 +222,7 @@ html, body {
   border: 2px solid #582964;
   border-radius: 5px;
   cursor: pointer;
-  background-image: image-url("arrow-204-16.png");
-  background-repeat: no-repeat;
-  background-color: #582964;
-  background-position: 240px 6px;
+  background: #582964 image-url("arrow-204-16.png") no-repeat 240px 6px;
   width: 265px;
 }
 
@@ -227,9 +234,6 @@ html, body {
   border: 2px solid #582964;
   border-radius: 5px;
   cursor: pointer;
-  background-image: image-url("arrow-204-16.png");
-  background-repeat: no-repeat;
-  background-color: #582964;
-  background-position: 85px 2px;
+  background: #582964 image-url("arrow-204-16.png") no-repeat 85px 2px;
   width: 110px;
 }

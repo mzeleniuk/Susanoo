@@ -21,8 +21,10 @@
   <meta name="theme-color" content="#ffffff">
 
   <title><%= full_title(yield(:title)) %></title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>">
@@ -35,8 +37,10 @@
         <%= submit_tag 'submit' %>
         <%= javascript_tag "$('.locale input').hide()" %>
       <% end %>
+
       <%= @page_title || t('.title_html') %>
     </div>
+
     <div id="columns">
       <div id="side">
         <ul>
@@ -45,15 +49,19 @@
           <li><%= link_to t('.news_html'), news_path %></li>
           <li><%= link_to t('.contact_html'), contact_path %></li>
         </ul>
+
         <% if session[:user_id] %>
-        <ul>
-          <li><%= link_to 'Admin\'s Home', admin_path %></li>
-          <li><%= link_to 'Orders', orders_path %></li>
-          <li><%= link_to 'Products', products_path %></li>
-          <li><%= link_to 'Users', users_path %></li>
-        </ul>
-        <%= button_to 'Logout', logout_path, method: :delete, :class => 'button' %>
+          <ul>
+            <li><%= link_to 'Admin\'s Home', admin_path %></li>
+            <li><%= link_to 'Orders', orders_path %></li>
+            <li><%= link_to 'Products', products_path %></li>
+            <li><%= link_to 'Users', users_path %></li>
+          </ul>
+
+          <%= button_to t('.logout_html'), logout_path, method: :delete, class: 'button',
+                        data: {disable_with: t('.logging_out_html')} %>
         <% end %>
+
         <div id="cart">
           <% if @cart %>
             <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
@@ -62,30 +70,33 @@
           <% end %>
         </div>
       </div>
+
       <div id="main">
         <%= yield %>
       </div>
     </div>
   </div>
+
   <div class="footer">
     <div class="links">
       <ul>
         <li><h3><%= t('.content_html') %></h3></li>
-          <li><%= link_to t('.about_html'), about_path %></li>
-          <li><%= link_to t('.contact_html'), contact_path %></li>
+        <li><%= link_to t('.about_html'), about_path %></li>
+        <li><%= link_to t('.contact_html'), contact_path %></li>
       </ul>
       <ul>
         <li><h3><%= t('.follow_html') %></h3></li>
-          <li><a href="https://www.facebook.com">Facebook</a></li>
-          <li><a href="https://twitter.com">Twitter</a></li>
+        <li><a href="https://www.facebook.com">Facebook</a></li>
+        <li><a href="https://twitter.com">Twitter</a></li>
       </ul>
       <ul>
         <li><h3><%= t('.legal_html') %></h3></li>
-          <li><%= link_to t('.terms_html'), terms_path %></li>
-          <li><%= link_to t('.privacy_html'), privacy_path %></li>
+        <li><%= link_to t('.terms_html'), terms_path %></li>
+        <li><%= link_to t('.privacy_html'), privacy_path %></li>
       </ul>
     </div>
     <hr>
+
     <div class="copyright">Michael Zelenyuk, 2015</div>
   </div>
 </body>

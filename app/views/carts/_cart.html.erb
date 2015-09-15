@@ -10,9 +10,11 @@
 </table>
 
 <p>
-  <%= button_to t('.checkout_html'), new_order_path, method: :get, :class => 'button_primary' %>
+  <%= button_to t('carts.cart.checkout_html'), new_order_path, method: :get, class: 'button_primary',
+                data: {disable_with: t('carts.cart.checkout_html')} %>
 </p>
+
 <p>
-  <%= button_to t('.empty_html'), cart, method: :delete, :class => 'button',
-                data: {confirm: t('.empty_confirm_html')} %>
+  <%= button_to t('carts.cart.empty_html'), cart, method: :delete, class: 'button',
+                data: {confirm: t('carts.cart.empty_confirm_html')} %>
 </p>
