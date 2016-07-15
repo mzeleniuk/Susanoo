@@ -1,4 +1,4 @@
-<div class="Susanoo_form">
+<div class="susanoo_form">
   <% if flash[:alert] %>
     <p id="notice"><%= flash[:alert] %></p>
   <% end %>
@@ -8,12 +8,12 @@
       <legend><%= t('.legend_html') %></legend>
 
       <div class="field">
-        <%= text_field_tag :name, params[:name], size: 30, placeholder: t('.name_html'),
+        <%= text_field_tag :name, params[:name], placeholder: t('.name_html'),
                            class: 'input_field' %>
       </div>
 
       <div class="field">
-        <%= password_field_tag :password, params[:password], size: 30, placeholder: t('.password_html'),
+        <%= password_field_tag :password, params[:password], placeholder: t('.password_html'),
                                class: 'input_field' %>
       </div>
 

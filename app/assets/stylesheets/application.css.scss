@@ -32,7 +32,7 @@ html, body {
 }
 
 #columns {
-  background: #f2f2f2;
+  height: 100%;
   #main {
     margin-left: 22em;
     padding: 1em;
@@ -41,8 +41,10 @@ html, body {
   #side {
     float: left;
     padding: 1em 2em;
-    width: 18em;
-    background: #f2f2f2;
+    width: 200px;
+    height: 100%;
+    background: image-url("shattered.png") repeat-y;
+    box-shadow: 0 0 15px rgba(0,0,0,.4);
     form, div {
       display: inline;
     }
@@ -58,6 +60,7 @@ html, body {
       padding: 0;
       li {
         list-style: none;
+        padding-top: 10px;
         padding-bottom: 10px;
         a {
           color: #666;
@@ -72,7 +75,7 @@ html, body {
   }
 }
 
-.Susanoo_form {
+.susanoo_form {
   fieldset {
     background: #f2f2f2;
     border: 2px solid #582964;
@@ -112,20 +115,19 @@ html, body {
 }
 
 .page-wrap {
-  min-height: 74%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.page-wrap:after {
-  content: "";
-  display: block;
+.content {
+  flex: 1 0 auto;
 }
 
 .footer {
   background: #767679;
-  height: 300px;
-  clear: both;
-  position: relative;
-  z-index: 10;
+  margin-top: 62px;
+  flex: 0 0 auto;
   line-height: 6em;
   ul {
     float: left;

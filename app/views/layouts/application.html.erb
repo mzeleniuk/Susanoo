@@ -29,6 +29,7 @@
 </head>
 <body class="<%= controller.controller_name %>">
   <div class="page-wrap">
+    <div class="content">
     <div id="banner">
       <%= form_tag store_path, class: 'locale' do %>
         <%= select_tag 'set_locale',
@@ -97,7 +98,8 @@
     </div>
     <hr>
 
-    <div class="copyright">Michael Zelenyuk, 2015</div>
+    <div class="copyright">Michael Zelenyuk, 2015 -  <%= Time.now.year %></div>
+  </div>
   </div>
 </body>
 </html>
