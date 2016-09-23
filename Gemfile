@@ -17,6 +17,9 @@ gem 'kaminari', '0.16.3'
 gem 'simplecov', '0.10.0', require: false, group: :test
 gem 'codeclimate-test-reporter', '0.4.7', group: :test, require: nil
 
+# Hooks Roadie into Rails application to help with email generation
+gem 'roadie-rails', '~> 1.1'
+
 group :development, :test do
   gem 'sqlite3', '1.3.10'
   gem 'byebug', '4.0.5'
