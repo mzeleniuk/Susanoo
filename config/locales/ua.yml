@@ -73,7 +73,7 @@ ua:
 
   store:
     index:
-      login_html: Увійти"
+      login_html: "Увійти"
       title_html: "Каталог Susanoo"
       add_html: "Додати до Кошика"
       adding_html: "Додавання до Кошика..."
