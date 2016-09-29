@@ -29,6 +29,9 @@ group :development do
 
   # A static analysis security vulnerability scanner for Ruby on Rails applications
   gem 'brakeman', require: false
+
+  # A Ruby static code analyzer, based on the community Ruby style guide
+  gem 'rubocop', '~> 0.43.0', require: false
 end
 
 group :development, :test do

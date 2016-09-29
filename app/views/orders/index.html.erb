@@ -19,7 +19,7 @@
     </thead>
 
     <tbody>
-      <% @orders.each do |order| %>
+      <% @orders.includes(line_items: [:product]).each do |order| %>
         <tr>
           <td><%= order.name %></td>
           <td><%= order.address %></td>
@@ -27,8 +27,8 @@
           <td><%= order.pay_type %></td>
           <td>
             <% order.line_items.each do |line_item| %>
-              <%= "#{Product.find(line_item.product_id).title}," %>
-              <%= "$#{Product.find(line_item.product_id).price} x" %>
+              <%= "#{line_item.product.title}," %>
+              <%= "$#{line_item.product.price} x" %>
               <%= line_item.quantity %>
               <br>
             <% end %>
