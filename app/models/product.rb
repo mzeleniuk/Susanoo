@@ -7,7 +7,7 @@ class Product < ActiveRecord::Base
   validates :title, presence: true, uniqueness: true, length: {minimum: 10}
   validates :description, presence: true, length: {minimum: 10}
   validates :image_url, presence: true, format: {
-                          with: %r{\.(gif|jpg|png)\Z}i,
+                          with: /\A[\w+\W]+(gif|jpg|png)\z/i,
                           message: 'URL should point on image of GIF, JPG or PNG format'
                       }
   validates :price, presence: true, numericality: {greater_than_or_equal_to: 0.01}

@@ -26,6 +26,9 @@ gem 'roadie-rails', '~> 1.1'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 3.3'
+
+  # A static analysis security vulnerability scanner for Ruby on Rails applications
+  gem 'brakeman', require: false
 end
 
 group :development, :test do
