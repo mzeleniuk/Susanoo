@@ -1,5 +1,9 @@
-//= require_tree .
 //= require_self
+//= require carts
+//= require orders
+//= require products
+//= require scaffolds
+//= require store
 
 html, body {
   width: 100%;

@@ -1,11 +1,68 @@
-<h1>Susanoo</h1>
+<table class="body-wrap">
+  <tr>
+    <td></td>
+    <td class="container" width="1024">
+      <div class="content">
+        <table class="main" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="content-wrap align-center">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="content-block">
+                    <h2>Thanks for using Susanoo</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block">
+                    <table class="invoice">
+                      <tr>
+                        <td>Dear <%= @order.name %>!</td>
+                      </tr>
+                      <tr>
+                        <td>Thank you for your recent order from Susanoo Store.</td>
+                      </tr>
+                      <tr>
+                        <td>You ordered the following items:</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table class="invoice-items" cellpadding="0" cellspacing="0">
+                            <% @order.line_items.each do |item| %>
+                              <tr>
+                                <td><%= item.product.title %></td>
+                                <td class="align-right"><%= item.product.price %> X <%= item.quantity %></td>
+                              </tr>
+                            <% end %>
+                            <tr class="total">
+                              <td class="align-right" width="80%">Total</td>
+                              <td class="align-right">
+                                <%= number_to_currency(@order.line_items.to_a.sum(&:total_price)) %>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>We'll send you a separate e-mail when your order ships.</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
 
-<p>Dear <%= @order.name %>!</p>
-
-<p>Thank you for your recent order from Susanoo Store.</p>
-
-<p>You ordered the following items:</p>
-
-<%= render @order.line_items -%>
-
-<p>We'll send you a separate e-mail when your order ships.</p>
+        <div class="footer">
+          <table width="100%">
+            <tr>
+              <td class="align-center content-block">
+                <%= link_to ("Susanoo Store, #{Time.current.year}"), store_url %>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
