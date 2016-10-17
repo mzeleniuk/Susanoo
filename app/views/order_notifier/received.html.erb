@@ -9,20 +9,20 @@
               <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="content-block">
-                    <h2>Thanks for using Susanoo</h2>
+                    <h2><%= t('order_notifier.received.body.title') %></h2>
                   </td>
                 </tr>
                 <tr>
                   <td class="content-block">
                     <table class="invoice">
                       <tr>
-                        <td>Dear <%= @order.name %>!</td>
+                        <td><%= t('order_notifier.received.body.paragraph_1', user: @order.name) %></td>
                       </tr>
                       <tr>
-                        <td>Thank you for your recent order from Susanoo Store.</td>
+                        <td><%= t('order_notifier.received.body.paragraph_2') %></td>
                       </tr>
                       <tr>
-                        <td>You ordered the following items:</td>
+                        <td><%= t('order_notifier.received.body.paragraph_3') %></td>
                       </tr>
                       <tr>
                         <td>
@@ -30,11 +30,13 @@
                             <% @order.line_items.each do |item| %>
                               <tr>
                                 <td><%= item.product.title %></td>
-                                <td class="align-right"><%= item.product.price %> X <%= item.quantity %></td>
+                                <td class="align-right">
+                                  <%= number_to_currency(item.product.price) %> X <%= item.quantity %>
+                                </td>
                               </tr>
                             <% end %>
                             <tr class="total">
-                              <td class="align-right" width="80%">Total</td>
+                              <td class="align-right" width="80%"><%= t('order_notifier.received.body.total') %></td>
                               <td class="align-right">
                                 <%= number_to_currency(@order.line_items.to_a.sum(&:total_price)) %>
                               </td>
@@ -43,7 +45,7 @@
                         </td>
                       </tr>
                       <tr>
-                        <td>We'll send you a separate e-mail when your order ships.</td>
+                        <td><%= t('order_notifier.received.body.paragraph_4') %></td>
                       </tr>
                     </table>
                   </td>
@@ -57,7 +59,7 @@
           <table width="100%">
             <tr>
               <td class="align-center content-block">
-                <%= link_to ("Susanoo Store, #{Time.current.year}"), store_url %>
+                <%= link_to ("#{t('order_notifier.received.body.footer')}, #{Time.current.year}"), store_url %>
               </td>
             </tr>
           </table>

@@ -112,4 +112,16 @@ en:
         one: "1 error prohibited this %{model} from being saved"
         other: "%{count} errors prohibited this %{model} from being saved"
 
+  order_notifier:
+    received:
+      subject: 'Susanoo Order Confirmation'
+      body:
+        title: 'Thanks for using Susanoo!'
+        paragraph_1: 'Dear %{user}!'
+        paragraph_2: 'Thank you for your recent order from Susanoo Store.'
+        paragraph_3: 'You ordered the following items:'
+        total: 'Total'
+        paragraph_4: "We'll send you a separate e-mail when your order ships."
+        footer: 'Susanoo Store'
+
   thanks_html: "Thank you for your order!"
