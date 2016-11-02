@@ -1,5 +1,61 @@
-<h1>Susanoo Order Shipped</h1>
+<table class="body-wrap">
+  <tr>
+    <td></td>
+    <td class="container" width="1024">
+      <div class="content">
+        <table class="main" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="content-wrap align-center">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="content-block">
+                    <h2><%= t('order_notifier.shipped.body.title') %></h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="content-block">
+                    <table class="invoice">
+                      <tr>
+                        <td><%= t('order_notifier.shipped.body.paragraph_1') %></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table class="invoice-items" cellpadding="0" cellspacing="0">
+                            <% @order.line_items.each do |item| %>
+                              <tr>
+                                <td><%= item.product.title %></td>
+                                <td class="align-right">
+                                  <%= number_to_currency(item.product.price) %> X <%= item.quantity %>
+                                </td>
+                              </tr>
+                            <% end %>
+                            <tr class="total">
+                              <td class="align-right" width="80%"><%= t('order_notifier.shipped.body.total') %></td>
+                              <td class="align-right">
+                                <%= number_to_currency(@order.line_items.to_a.sum(&:total_price)) %>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
 
-<p>This is just to let you know that we've shipped your recent order:</p>
-
-<%= render @order.line_items -%>
+        <div class="footer">
+          <table width="100%">
+            <tr>
+              <td class="align-center content-block">
+                <%= link_to ("#{t('order_notifier.shipped.body.footer')}, #{Time.current.year}"), store_url %>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
