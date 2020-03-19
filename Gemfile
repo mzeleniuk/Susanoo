@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
+ruby '2.5.7'
 
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.11.1'
 gem 'sass-rails', '5.0.6'
 gem 'uglifier', '2.7.2'
 gem 'coffee-rails', '4.1.0'
@@ -14,7 +14,7 @@ gem 'bcrypt', '3.1.10'
 gem 'kaminari', '0.16.3'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.6'
+gem 'puma', '3.12.4'
 
 # Test coverage
 gem 'simplecov', '0.10.0', require: false, group: :test
