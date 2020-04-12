@@ -18,7 +18,6 @@ gem 'puma', '3.12.4'
 
 # Test coverage
 gem 'simplecov', '0.10.0', require: false, group: :test
-gem 'codeclimate-test-reporter', '0.4.7', group: :test, require: nil
 
 # Hooks Roadie into Rails application to help with email generation
 gem 'roadie-rails', '~> 1.1'
